@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DF92D9A-7823-410C-B797-58FB1CAE1955}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Interfaz_Comprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz_Comprobante.Designer.cs">
+      <DependentUpon>Interfaz_Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_Mantenimiento_Autos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz_Mantenimiento_Autos.Designer.cs">
+      <DependentUpon>Interfaz_Mantenimiento_Autos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_Mantenimiento_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz_Mantenimiento_Clientes.Designer.cs">
+      <DependentUpon>Interfaz_Mantenimiento_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz_Principal.Designer.cs">
+      <DependentUpon>Interfaz_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz_Reportes.Designer.cs">
+      <DependentUpon>Interfaz_Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_Venta_Autos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz_Venta_Autos.Designer.cs">
+      <DependentUpon>Interfaz_Venta_Autos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz_Venta_Partes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz_Venta_Partes.Designer.cs">
+      <DependentUpon>Interfaz_Venta_Partes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{cc82f394-fc6a-4246-91da-61436e98a6f8}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{63b57c77-4f6e-4db4-8277-cecbe9176dd6}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Interfaz_Comprobante.resx">
+      <DependentUpon>Interfaz_Comprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz_Mantenimiento_Autos.resx">
+      <DependentUpon>Interfaz_Mantenimiento_Autos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz_Mantenimiento_Clientes.resx">
+      <DependentUpon>Interfaz_Mantenimiento_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz_Principal.resx">
+      <DependentUpon>Interfaz_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz_Reportes.resx">
+      <DependentUpon>Interfaz_Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz_Venta_Autos.resx">
+      <DependentUpon>Interfaz_Venta_Autos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz_Venta_Partes.resx">
+      <DependentUpon>Interfaz_Venta_Partes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
