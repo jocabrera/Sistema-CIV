@@ -11,5 +11,6 @@ namespace CapaDatos
     public class Conexion
     {
         public static string Cn = "Data Source=LUIS-PC\\SQLEXPRESS; Initial Catalog=BDSistemaCIV; Integrated Security=true";
+
     }
 }
